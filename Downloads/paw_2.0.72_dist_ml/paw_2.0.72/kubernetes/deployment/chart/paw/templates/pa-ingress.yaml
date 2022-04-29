@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "{{ .Values.common.proxyTimeoutSeconds }}s"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "{{ .Values.common.proxyTimeoutSeconds }}s"
+    argocd.argoproj.io/sync-wave: “300"
+  labels:
+    app: {{ .Values.common.appName }}
+    app.kubernetes.io/name: {{ .Values.common.appName }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    helm.sh/chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+  name: gateway{{ .Values.instanceIdWithinNamespace }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  rules:
+    - host: {{ .Values.ingress.host }}
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: gateway{{ .Values.instanceIdWithinNamespace }}
+              servicePort: 8000
+
