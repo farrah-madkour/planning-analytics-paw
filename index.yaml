@@ -3,7 +3,23 @@ entries:
   paw:
   - apiVersion: v1
     appVersion: 2.0.72
-    created: "2022-05-03T11:14:30.923664-05:00"
+    created: "2022-05-05T14:59:16.261347-05:00"
+    description: PA Workspace Local
+    digest: 4f82369830bdfbd347765cadf602c80be2071ad9a768b41973c8b4c783d2f16e
+    keywords:
+    - Commercial
+    - Limited
+    - amd64
+    - ICP
+    - Analytics
+    kubeVersion: '>=1.11.0'
+    name: paw
+    urls:
+    - https://farrah-madkour.github.io/planning-analytics-paw/paw-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v1
+    appVersion: 2.0.72
+    created: "2022-05-05T14:59:16.26435-05:00"
     description: PA Workspace Local
     digest: 30c7b56e3b5014b532e57878ccff6fa02c6144d50a8d84662f65e4c0416e8918
     keywords:
@@ -15,22 +31,6 @@ entries:
     kubeVersion: '>=1.11.0'
     name: paw
     urls:
-    - https://farrah-madkour.github.io/planning-analytics-paw/paw-1.0.3.tgz
+    - https://farrah-madkour.github.io/planning-analytics-paw/planning-analytics-paw/paw-1.0.3.tgz
     version: 1.0.3
-  - apiVersion: v1
-    appVersion: 2.0.72
-    created: "2022-05-03T11:14:30.926586-05:00"
-    description: PA Workspace Local
-    digest: 75b334552b6549603df8c13411703f748eec632c3e4195fc7ba1e7d019a120f6
-    keywords:
-    - Commercial
-    - Limited
-    - amd64
-    - ICP
-    - Analytics
-    kubeVersion: '>=1.11.0'
-    name: paw
-    urls:
-    - https://farrah-madkour.github.io/planning-analytics-paw/planning-analytics-paw/paw-1.0.2.tgz
-    version: 1.0.2
-generated: "2022-05-03T11:14:30.921211-05:00"
+generated: "2022-05-05T14:59:16.258412-05:00"
